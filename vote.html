@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <h1>투 표</h1>
+</head>
+
+<body>
+    <input type="radio" name="candidate_n" value="minju"> 문재인
+    <text id="a">0</text>
+    <br>
+    <input type="radio" name="candidate_n" value="saenu"> 박근혜
+    <text id="b">0</text>
+    <br>
+    <input type="radio" name="candidate_n" value="mirae"> 안철수
+    <text id="c">0</text>
+    <br>
+    <input type="radio" name="candidate_n" value="baren"> 유승민
+    <text id="d">0</text>
+    <br>
+    <input type="radio" name="candidate_n" value="just"> 심상정
+    <text id="e">0</text>
+    <br>
+    <br>
+    <button type="submit" onclick="show_checked()">선 택</button>
+    <button type="submit" onclick="initial()">초기화</button>
+
+    <script>
+        var vote = [0, 0, 0, 0, 0];
+        var str = ["a", "b", "c", "d", "e"];
+        var can = document.getElementsByName("candidate_n");
+
+        function show_checked() {
+            var x, index;
+
+            for (var i = 0; i < can.length; i++) {
+                if (can[i].checked) {
+                    vote[i] = vote[i] + 1;
+                    document.getElementById(str[i]).innerHTML = vote[i];
+                }
+            }
+        }
+    
+        function initial() {
+            for (var i = 0; i < can.length; i++) {
+                vote[i] = 0;
+                document.getElementById(str[i]).innerHTML = vote[i];
+            }
+        }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h1>투표</h1>
+<p>번호를 선택하세요.</p>
+
+<form method="post" action="voting2.html" name="vote_num">
+    <input type="radio" name="candidate_n" value="minju"> 문재인<br>
+    <input type="radio" name="candidate_n" value="saenu"> 박근혜<br>
+    <input type="radio" name="candidate_n" value="mirae"> 안철수<br>
+    <input type="radio" name="candidate_n" value="baren"> 유승민<br>
+    <input type="radio" name="candidate_n" value="just"> 심상정<br><br>
+    <input type="submit" value="Submit" onclick='show_checked();'/>
+</form>
+
+<script>
+    function show_checked() {
+        var obj = document.getElementsByName('candidate_n');
+        var checked_index = -1;
+        var checked_value = '';
+        for( i=0; i<obj.length; i++ ) {
+            if(obj[i].checked) {
+                checked_index = i;
+                checked_value = obj[i].value;
+            }
+        }
+        alert( '선택된 항목 인덱스: '+checked_index+'\n선택된 항목 값: '+checked_value );
+    }
+    
+</script>
+</body>
+</html>

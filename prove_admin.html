@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+
+<html>
+
+<style>
+    @import url(https://fonts.googleapis.com/earlyaccess/nanumgothic.css);
+
+    #title {
+        margin-top: 10%;
+        margin-bottom: 5%;
+    }
+
+    button {
+        background-color: dodgerblue;
+        margin: 2%;
+        text-align: center;
+        width: 20%;
+        height: 30%;
+        font-size: 150%;
+        color: white;
+        font-family: 'Nanum Gothic';
+        border: hidden;
+        border-radius: 10px;
+    }
+
+    #form{
+        width : 20%;
+        height: 30%;
+        font-size: 120%;
+        text-align: left;
+        margin: 1%;
+    }
+
+
+    #p1{
+        margin :0;
+       
+    }
+
+    #loc_selection{
+        width:20%;
+        height:30px;
+        font-size: 100%;
+        text-align: left;
+        margin: 1%;
+    }
+
+</style>
+
+
+<head>
+    <title>Digital Vote</title>
+</head>
+
+<body>
+    <div id = "title" style="vertical-align: baseline; text-align: center;">
+        <h1 style="font-size: 36px;">CHAIN VOTING</h1>
+        <img src="main.png" alt="main_scene" width="20%" height="20%">
+    </div>
+
+    <div id="main_scene">
+            <form action="/action_page.php" style = "text-align: center">
+                <p id = "p1">관리자 ID:</p>
+                <input id = "form" type="text" name="lastname" value="Mouse">
+                <br>
+                <p id = "p1">관리자 비밀번호:</p>
+                <input id = "form" type="text" name="lastname" value="Mouse">
+                <br><br>
+                <button onclick="location.href = 'voting.html' ">확 인</button>
+              </form> 
+    </div>
+
+</body>
+
+<script>
+        // function enter_info() {
+        //     document.getElementById("demo").style.color = "red";
+        // }
+        // function total_reuslt() {
+        //     document.getElementById("demo").style.color = "red";
+        // }
+        // function admin_info() {
+        //     document.getElementById("demo").style.color = "red";
+        // }
+</script>
+
+</html>
