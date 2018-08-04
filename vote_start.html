@@ -1,11 +1,37 @@
 <!DOCTYPE html>
+<script src="https://www.gstatic.com/firebasejs/4.12.1/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/4.12.1/firebase-auth.js"></script>
+<script src="https://www.gstatic.com/firebasejs/4.12.1/firebase-database.js"></script>
+<script src="https://www.gstatic.com/firebasejs/4.12.1/firebase-firestore.js"></script>
+<script src="https://www.gstatic.com/firebasejs/4.12.1/firebase-messaging.js"></script>
+<script src="https://www.gstatic.com/firebasejs/4.12.1/firebase-functions.js"></script>
+
+<!-- Leave out Storage -->
+<!-- <script src="https://www.gstatic.com/firebasejs/4.12.1/firebase-storage.js"></script> -->
+<script>
+    var firebase = require("firebase/app");
+    require("firebase/auth");
+    require("firebase/database");
+    require("firebase/firestore");
+    require("firebase/messaging");
+    require("firebase/functions");
+
+    // Leave out Storage
+    //require("firebase/storage");
+
+    var config = {
+        // ...
+    };
+    firebase.initializeApp(config);
+</script>
+
 
 <html>
 
 <style>
     @import url(https://fonts.googleapis.com/earlyaccess/nanumgothic.css);
 
-    #title{
+    #title {
         margin-top: 10%;
         margin-bottom: 5%;
     }
@@ -30,7 +56,7 @@
 </head>
 
 <body>
-    <div id = "title" style="vertical-align: baseline; text-align: center;">
+    <div id="title" style="vertical-align: baseline; text-align: center;">
         <h1 style="font-size: 36px;">CHAIN VOTING</h1>
         <img src="main.png" alt="main_scene" width="20%" height="20%">
     </div>
@@ -45,10 +71,27 @@
 
 </body>
 
+
+
+<script src="https://www.gstatic.com/firebasejs/4.12.1/firebase.js"></script>
 <script>
+    // Initialize Firebase
+    // TODO: Replace with your project's customized code snippet
+    var config = {
+        apiKey: "<API_KEY>",
+        authDomain: "<PROJECT_ID>.firebaseapp.com",
+        databaseURL: "https://<DATABASE_NAME>.firebaseio.com",
+        storageBucket: "<BUCKET>.appspot.com",
+        messagingSenderId: "<SENDER_ID>",
+    };
+    firebase.initializeApp(config);
+</script>
+
+<script>
+
         // function enter_info() {
         //     document.getElementById("demo").style.color = "red";
-        // }
+        // }gi
         // function total_reuslt() {
         //     document.getElementById("demo").style.color = "red";
         // }
